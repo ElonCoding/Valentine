@@ -30,8 +30,8 @@ const SpineBackground = () => {
                     // I will put a placeholder comment here.
 
                     // DEMO MODE: (Uncomment to test with Spineboy)
-                    jsonUrl: 'https://esotericsoftware.com/files/examples/4.0/spineboy/export/spineboy-pro.json',
-                    atlasUrl: 'https://esotericsoftware.com/files/examples/4.0/spineboy/export/spineboy-pro.atlas',
+                    jsonUrl: '/assets/spine/spineboy-pro.json',
+                    atlasUrl: '/assets/spine/spineboy.atlas',
                     animation: 'idle',
                     backgroundColor: '#00000000',
                     alpha: true,
