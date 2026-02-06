@@ -7,20 +7,30 @@ const MusicToggle = () => {
 
     // Initial autoplay attempt
     useEffect(() => {
-        // Browser policy blocks autoplay usually, so we need interaction.
-        // We'll try, but also have the toggle.
-        const playAudio = async () => {
-            if (audioRef.current) {
-                try {
-                    audioRef.current.volume = 0.2;
-                    // await audioRef.current.play(); // Usually fails without interaction
-                    // setIsPlaying(true);
-                } catch (err) {
-                    console.log("Autoplay blocked");
-                }
+        const audio = audioRef.current;
+        if (!audio) return;
+
+        audio.volume = 0.3;
+
+        // Try to play on first interaction with the document
+        const handleFirstInteraction = async () => {
+            try {
+                await audio.play();
+                setIsPlaying(true);
+                document.removeEventListener('click', handleFirstInteraction);
+                document.removeEventListener('touchstart', handleFirstInteraction);
+            } catch (err) {
+                console.log("Autoplay still blocked or failed");
             }
         };
-        playAudio();
+
+        document.addEventListener('click', handleFirstInteraction);
+        document.addEventListener('touchstart', handleFirstInteraction);
+
+        return () => {
+            document.removeEventListener('click', handleFirstInteraction);
+            document.removeEventListener('touchstart', handleFirstInteraction);
+        };
     }, []);
 
     const togglePlay = () => {
