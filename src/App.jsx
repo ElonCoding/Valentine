@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
-import SpineBackground from './components/SpineBackground';
+import HeartBackground from './components/HeartBackground';
 import CursorTrail from './components/CursorTrail';
 import Vignette from './components/Vignette';
 import MusicToggle from './components/MusicToggle';
@@ -17,7 +17,7 @@ function App() {
   return (
     <div className="relative w-full h-screen overflow-hidden bg-gradient-to-br from-[#2a0a18] to-[#1a0510] text-white">
       {/* Background Layer */}
-      <SpineBackground />
+      <HeartBackground />
       <Vignette />
 
       {/* Interactive Layer */}
