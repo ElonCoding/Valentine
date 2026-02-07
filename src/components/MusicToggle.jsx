@@ -46,7 +46,7 @@ const MusicToggle = () => {
 
     return (
         <div className="fixed top-6 right-6 z-50">
-            <audio ref={audioRef} loop src="/music/romantic_instrumental.mp3" /> {/* Placeholder src */}
+            <audio ref={audioRef} loop src="/music/life.mp3" />
             <button
                 onClick={togglePlay}
                 className="p-3 bg-white/10 backdrop-blur-md rounded-full hover:bg-white/20 transition-all text-romantic-pink border border-white/20 shadow-[0_0_15px_rgba(255,182,193,0.3)] animate-pulse-slow"
