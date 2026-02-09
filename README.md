@@ -1,16 +1,67 @@
-# React + Vite
+# 💖 Valentine's Celebration Web App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A beautiful, interactive, and romantic web application built to celebrate Valentine's Day. Featuring floating heart animations, music, and a multi-step journey to a special reveal.
 
-Currently, two official plugins are available:
+## ✨ Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Animated Heart Background**: A serene background with floating hearts powered by `framer-motion`.
+- **Interactive Journey**: A guided flow through different steps (Hero, Questions, Message Reveal, and Final Screen).
+- **Romantic Background Music**: Auto-playing music (on interaction) with a functional mute/play toggle.
+- **Modern UI/UX**: Built with React, Tailwind CSS, and Framer Motion for smooth transitions and a premium feel.
+- **Responsive Design**: Works beautifully on both desktop and mobile devices.
 
-## React Compiler
+## 🚀 Getting Started
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### Prerequisites
 
-## Expanding the ESLint configuration
+- Node.js (v18 or higher recommended)
+- npm or yarn
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Installation
+
+1.  **Clone the repository**:
+    ```bash
+    git clone <repository-url>
+    cd valentine
+    ```
+
+2.  **Install dependencies**:
+    ```bash
+    npm install
+    ```
+
+3.  **Run the development server**:
+    ```bash
+    npm run dev
+    ```
+
+4.  **Open in browser**:
+    Navigate to `http://localhost:5173` (or the port shown in your terminal).
+
+## 🛠️ Built With
+
+- **React 19**: Frontend framework.
+- **Vite**: Ultra-fast build tool and dev server.
+- **Tailwind CSS**: Utility-first CSS framework for styling.
+- **Framer Motion**: For fluid and romantic animations.
+- **Lucide React**: For beautiful and consistent iconography.
+- **Canvas Confetti**: For the celebration effects.
+
+## 📂 Project Structure
+
+- `src/components/`: Contains all UI components like `HeartBackground`, `MusicToggle`, `Hero`, etc.
+- `src/utils/`: Utility functions (e.g., celebration effects).
+- `public/music/`: Stores the background music files.
+- `src/App.jsx`: The main application orchestrator.
+
+## 🎵 Assets
+
+The project uses:
+- `public/music/life.mp3`: Background music track.
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+---
+Made with ❤️ for Valentine's Day.
