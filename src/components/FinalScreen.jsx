@@ -3,11 +3,15 @@ import { motion } from 'framer-motion';
 import { Heart } from 'lucide-react';
 import { triggerHeartConfetti } from '../utils/celebration';
 
-const FinalScreen = () => {
+const FinalScreen = ({ onNext }) => {
 
     const handleCelebrate = () => {
         triggerHeartConfetti();
-        // Logic to increase music volume could go here if we had access to the audio ref globally or via context
+        if (onNext) {
+            setTimeout(() => {
+                onNext();
+            }, 2000); // Give time for confetti before moving to the very last page
+        }
     };
 
     return (

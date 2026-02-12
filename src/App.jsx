@@ -8,6 +8,7 @@ import Hero from './components/Hero';
 import QuestionFlow from './components/QuestionFlow';
 import MessageReveal from './components/MessageReveal';
 import FinalScreen from './components/FinalScreen';
+import ValentineWish from './components/ValentineWish';
 
 function App() {
   const [step, setStep] = useState(0);
@@ -70,10 +71,23 @@ function App() {
               key="final"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
               transition={{ duration: 1 }}
               className="absolute inset-0"
             >
-              <FinalScreen />
+              <FinalScreen onNext={nextStep} />
+            </motion.div>
+          )}
+
+          {step === 4 && (
+            <motion.div
+              key="wish"
+              initial={{ opacity: 0, scale: 1.1 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 1.5 }}
+              className="absolute inset-0"
+            >
+              <ValentineWish />
             </motion.div>
           )}
         </AnimatePresence>
