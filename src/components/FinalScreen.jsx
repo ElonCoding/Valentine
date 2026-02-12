@@ -33,10 +33,24 @@ const FinalScreen = ({ onNext }) => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.5, duration: 1 }}
-                className="text-3xl md:text-5xl font-bold text-white mb-12 text-center"
+                className="text-3xl md:text-5xl font-bold text-white mb-8 text-center"
             >
                 You make my world <span className="text-romantic-lavender">brighter</span> every day.
             </motion.h1>
+
+            <motion.div
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ delay: 1, duration: 1 }}
+                className="mb-12 w-64 md:w-80 rounded-2xl overflow-hidden shadow-[0_0_25px_rgba(255,182,193,0.3)] border border-white/10"
+            >
+                <img 
+                    src="/assets/ilu.gif" 
+                    alt="I Love You animation"
+                    className="w-full h-auto block"
+                    loading="lazy"
+                />
+            </motion.div>
 
             <motion.button
                 whileHover={{ scale: 1.1, boxShadow: "0 0 30px rgba(255, 182, 193, 0.6)" }}

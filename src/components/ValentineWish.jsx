@@ -34,6 +34,19 @@ const ValentineWish = () => {
                 </span>
             </motion.h1>
 
+            <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.8, duration: 1 }}
+                className="mt-12 w-64 md:w-96 rounded-2xl overflow-hidden shadow-[0_0_30px_rgba(255,182,193,0.4)] border border-white/10"
+            >
+                <img 
+                    src="/assets/tenor.gif" 
+                    alt="Romantic bears animation"
+                    className="w-full h-auto block"
+                />
+            </motion.div>
+
             {/* Subtle glow behind the text */}
             <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80vw] h-[40vh] bg-romantic-rose/10 blur-[120px] rounded-full -z-10" />
         </div>
