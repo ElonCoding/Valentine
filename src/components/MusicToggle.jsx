@@ -43,7 +43,6 @@ const MusicToggle = () => {
             setIsPlaying(!isPlaying);
         }
     };
-
     return (
         <div className="fixed top-6 right-6 z-50">
             <audio ref={audioRef} loop src="/music/life.mp3" />
